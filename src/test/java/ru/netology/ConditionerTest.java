@@ -54,7 +54,7 @@ class ConditionerTest {
         }
 
         @Test
-        public void shouldNotDecreaseTemperatureOverMax () {
+        public void shouldNotDecreaseTemperatureLessMin () {
            Conditioner conditioner = new Conditioner();
            conditioner.setMaxTemperature(30);
            conditioner.setMinTemperature(10);
