@@ -3,11 +3,12 @@ package ru.netology;
 public class Radio {
     private String name;
     private int currentStation;
-    private int minStation;
-    private int maxStation;
+    private int defaultStation = 10;
+    private int minStation = 0;
+    private int maxStation = 15;
     private int currentVolume;
-    private int minVolume;
-    private int maxVolume;
+    private int minVolume = 0;
+    private int maxVolume = 100;
     private boolean on;
 
     public String getName() {
@@ -48,6 +49,14 @@ public class Radio {
         } else {
             this.currentStation = nextStation;
         }
+    }
+
+    public int getDefaultStation() {
+        return defaultStation;
+    }
+
+    public void setDefaultStation(int defaultStation) {
+        this.defaultStation = defaultStation;
     }
 
     public int getMinStation() {
